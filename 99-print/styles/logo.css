@@ -1,0 +1,40 @@
+.logo-sprite, .logo-excel, .logo-file, .logo-ppt, .logo-radio-checked, .logo-radio, .logo-word {
+  background-image: url('../images/logo-sad34385f4c.png');
+  background-repeat: no-repeat;
+}
+
+.logo-excel {
+  background-position: 0 0;
+  height: 43px;
+  width: 40px;
+}
+
+.logo-file {
+  background-position: 0 -51px;
+  height: 35px;
+  width: 43px;
+}
+
+.logo-ppt {
+  background-position: 0 -94px;
+  height: 40px;
+  width: 38px;
+}
+
+.logo-radio-checked {
+  background-position: 0 -142px;
+  height: 13px;
+  width: 13px;
+}
+
+.logo-radio {
+  background-position: 0 -163px;
+  height: 13px;
+  width: 13px;
+}
+
+.logo-word {
+  background-position: 0 -184px;
+  height: 40px;
+  width: 36px;
+}

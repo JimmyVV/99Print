@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./styles/99shopping.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/jquery.mCustomScrollbar.css">
+    <title>99打印</title>
+</head>
+
+<body class="page">
+    <header class="banner">
+        <div class="set-width">
+            <div class="logo">
+                <img src="./images/logo.png" />
+                <img src="./images/desc.png" />
+            </div>
+            <ul class="nav">
+                <li role="homepage">首页</li>
+                <li role="introduction">简介</li>
+                <li role="article-base">本校文库</li>
+                <li role="setting"><span class="login">登录</span>|<span class="signin">注册</span></li>
+            </ul>
+        </div>
+    </header>
+    <article class="behavior">
+        <div class="print-lists">
+            <div class="files mCustomScrollbar" id="container">
+                <table class="table table-bordered">
+                    <thead>
+                        <th class="order">序号</th>
+                        <th class="file-name">文件名</th>
+                        <th class="share">共享</th>
+                        <th class="leaf">单/双面</th>
+                        <th class="direction">横/竖</th>
+                        <th class="ppt-mount">每面PPT的数量</th>
+                        <th class="size">大小</th>
+                        <th class="single-price">单价</th>
+                        <th class="copies">份数</th>
+                        <th class="gross">总价</th>
+                        <th class="remark">备注</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td role="order">1</td>
+                            <td role="file-name">
+                                <div><i class="logo-word"></i>2015年春微积分模拟卷(启明)</td>
+                            </div>
+                            <td role="share">
+                                <div>
+                                    <div>
+                                        <input type="radio" name="share1" value="yes" checked="checked">是</div>
+                                    <div>
+                                        <input type="radio" name="share1" value="no">否</div>
+                                </div>
+                            </td>
+                            <td role="page">
+                                <div>
+                                    <div>
+                                        <input type="radio" name="page1" value="single" checked="checked">单</div>
+                                    <div>
+                                        <input type="radio" name="page1" value="double">双</div>
+                                </div>
+                            </td>
+                            <td role="direction">
+                                <div>
+                                    <div>
+                                        <input type="radio" name="direction1" value="column" checked="checked">竖</div>
+                                    <div>
+                                        <input type="radio" name="direction1" value="row">横</div>
+                                </div>
+                            </td>
+                            <td role="ppt-mount">无</td>
+                            <td role="size">
+                                <select class="page-size">
+                                    <option value="A1">A1</option>
+                                    <option value="A2">A2</option>
+                                    <option value="A3">A3</option>
+                                    <option value="A4">A4</option>
+                                </select>
+                            </td>
+                            <td role="single-price">
+                                <span class="single">1.5</span>
+                            </td>
+                            <td role="copies">
+                                <input class="pages" type="text" value="12">
+                            </td>
+                            <td role="gross">
+                                <span class="gross-price">12.00</span>
+                            </td>
+                            <td role="remark">
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td role="order">2</td>
+                            <td role="file-name">
+                                <div><i class="logo-word"></i>2015年春微积分模拟卷(启明)</td>
+                            </div>
+                            <td role="share">
+                                <div>
+                                    <div>
+                                        <input type="radio" name="share2" value="yes" checked="checked">是</div>
+                                    <div>
+                                        <input type="radio" name="share2" value="no">否</div>
+                                </div>
+                            </td>
+                            <td role="page">
+                                <div>
+                                    <div>
+                                        <input type="radio" name="page2" value="single" checked="checked">单</div>
+                                    <div>
+                                        <input type="radio" name="page2" value="double">双</div>
+                                </div>
+                            </td>
+                            <td role="direction">
+                                <div>
+                                    <div>
+                                        <input type="radio" name="direction2" value="column" checked="checked">竖</div>
+                                    <div>
+                                        <input type="radio" name="direction2" value="row">横</div>
+                                </div>
+                            </td>
+                            <td role="ppt-mount">无</td>
+                            <td role="size">
+                                <select class="page-size">
+                                    <option value="A1">A1</option>
+                                    <option value="A2">A2</option>
+                                    <option value="A3">A3</option>
+                                    <option value="A4">A4</option>
+                                </select>
+                            </td>
+                            <td role="single-price">
+                                <span class="single">1.5</span>
+                            </td>
+                            <td role="copies">
+                                <input class="pages" type="text" value="12">
+                            </td>
+                            <td role="gross">
+                                <span class="gross-price">12.00</span>
+                            </td>
+                            <td role="remark">
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td role="order">3</td>
+                            <td role="file-name">
+                                <div><i class="logo-word"></i>2015年春微积分模拟卷(启明)</td>
+                            </div>
+                            <td role="share">
+                                <div>
+                                    <div>
+                                        <input type="radio" name="share3" value="yes" checked="checked">是</div>
+                                    <div>
+                                        <input type="radio" name="share3" value="no">否</div>
+                                </div>
+                            </td>
+                            <td role="page">
+                                <div>
+                                    <div>
+                                        <input type="radio" name="page3" value="single" checked="checked">单</div>
+                                    <div>
+                                        <input type="radio" name="page3" value="double">双</div>
+                                </div>
+                            </td>
+                            <td role="direction">
+                                <div>
+                                    <div>
+                                        <input type="radio" name="direction3" value="column" checked="checked">竖</div>
+                                    <div>
+                                        <input type="radio" name="direction3" value="row">横</div>
+                                </div>
+                            </td>
+                            <td role="ppt-mount">无</td>
+                            <td role="size">
+                                <select class="page-size">
+                                    <option value="A1">A1</option>
+                                    <option value="A2">A2</option>
+                                    <option value="A3">A3</option>
+                                    <option value="A4">A4</option>
+                                </select>
+                            </td>
+                            <td role="single-price">
+                                <span class="single">1.5</span>
+                            </td>
+                            <td role="copies">
+                                <input class="pages" type="text" value="12">
+                            </td>
+                            <td role="gross">
+                                <span class="gross-price">12.00</span>
+                            </td>
+                            <td role="remark">
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td role="order">4</td>
+                            <td role="file-name">
+                                <div><i class="logo-word"></i>2015年春微积分模拟卷(启明)</td>
+                            </div>
+                            <td role="share">
+                                <div>
+                                    <div>
+                                        <input type="radio" name="share4" value="yes" checked="checked">是</div>
+                                    <div>
+                                        <input type="radio" name="share4" value="no">否</div>
+                                </div>
+                            </td>
+                            <td role="page">
+                                <div>
+                                    <div>
+                                        <input type="radio" name="page4" value="single" checked="checked">单</div>
+                                    <div>
+                                        <input type="radio" name="page4" value="double">双</div>
+                                </div>
+                            </td>
+                            <td role="direction">
+                                <div>
+                                    <div>
+                                        <input type="radio" name="direction4" value="column" checked="checked">竖</div>
+                                    <div>
+                                        <input type="radio" name="direction4" value="row">横</div>
+                                </div>
+                            </td>
+                            <td role="ppt-mount">无</td>
+                            <td role="size">
+                                <select class="page-size">
+                                    <option value="A1">A1</option>
+                                    <option value="A2">A2</option>
+                                    <option value="A3">A3</option>
+                                    <option value="A4">A4</option>
+                                </select>
+                            </td>
+                            <td role="single-price">
+                                <span class="single">1.5</span>
+                            </td>
+                            <td role="copies">
+                                <input class="pages" type="text" value="12">
+                            </td>
+                            <td role="gross">
+                                <span class="gross-price">12.00</span>
+                            </td>
+                            <td role="remark">
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td role="order">1</td>
+                            <td role="file-name">
+                                <div><i class="logo-word"></i>2015年春微积分模拟卷(启明)</td>
+                            </div>
+                            <td role="share">
+                                <div>
+                                    <div>
+                                        <input type="radio" name="share" value="yes" checked="checked">是</div>
+                                    <div>
+                                        <input type="radio" name="share" value="no">否</div>
+                                </div>
+                            </td>
+                            <td role="page">
+                                <div>
+                                    <div>
+                                        <input type="radio" name="page" value="single" checked="checked">单</div>
+                                    <div>
+                                        <input type="radio" name="page" value="double">双</div>
+                                </div>
+                            </td>
+                            <td role="direction">
+                                <div>
+                                    <div>
+                                        <input type="radio" name="direction" value="column" checked="checked">竖</div>
+                                    <div>
+                                        <input type="radio" name="direction" value="row">横</div>
+                                </div>
+                            </td>
+                            <td role="ppt-mount">无</td>
+                            <td role="size">
+                                <select class="page-size">
+                                    <option value="A1">A1</option>
+                                    <option value="A2">A2</option>
+                                    <option value="A3">A3</option>
+                                    <option value="A4">A4</option>
+                                </select>
+                            </td>
+                            <td role="single-price">
+                                <span class="single">1.5</span>
+                            </td>
+                            <td role="copies">
+                                <input class="pages" type="text" value="12">
+                            </td>
+                            <td role="gross">
+                                <span class="gross-price">12.00</span>
+                            </td>
+                            <td role="remark">
+                                <input type="text">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="receiving-method">
+                <div class="left-part">
+                    <span class="receiving">收货方式:</span>
+                    <input type="radio" name="method" id="self-picking" value="到店自取">
+                    <label for="self-picking"><span class="logo-radio"></span>到店自取</label>
+                    <input type="radio" name="method" id="deliver" value="送货上门">
+                    <label for="deliver"><span class="logo-radio"></span>送货上门</label>
+                </div>
+                <div class="middle-part">
+                    <div class="pick">
+                        <select class="print-shop">
+                            <option value="韵体打印店">韵体打印店</option>
+                            <option value="东园打印店">东园打印店</option>
+                            <option value="韵苑打印店">韵苑打印店</option>
+                            <option value="游泳馆打印店">游泳馆打印店</option>
+                        </select>
+                        预计30分钟后取货
+                    </div>
+                    <div class="deliver">
+                        <input class="phone" type="text" placeholder="请输入联系方式" />
+                        <input class="address" type="text" placeholder="请输入收货地址" />
+                        <select>
+                            <option value="12:30-13:00">12:30-13:00</option>
+                            <option value="18:30-19:00">18:30-19:00</option>
+                            <option value="22:30-23:00">22:30-23:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="right-part">
+                    总价:<span class="total-price">123</span>元
+                    <button class="btn btn-primary clearing">结算</button>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer class="footer">
+        <div class="set-width">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3"><a href="">关于文库</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">订单服务</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">关于公司</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">关注我们</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-3"><a href="">文库简介</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">购买指南</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">公司简介</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">新浪微博</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-3"><a href="">使用说明</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">支付方式</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">加入我们</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">官方微信</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-3"><a href="">鼓励分享</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">送货政策</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">联系我们</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">官方贴吧</a></div>
+                </div>
+            </div>
+            <img src="./images/QR-code.png" />
+        </div>
+    </footer>
+    <script type="text/javascript" src="./scripts/jQuery.js"></script>
+    <script type="text/javascript" src="./scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="./scripts/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="./scripts/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript" src="./scripts/99shopping.js"></script>
+</body>
+
+</html>

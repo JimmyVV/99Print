@@ -1,0 +1,269 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+@import "compass/css3/flexbox",
+"compass/reset";
+
+/*// Core variables and mixins*/
+
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+/*// Core CSS*/
+
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+@import "logo";
+$font: "Microsoft YaHei",
+"Arial",
+"黑体",
+"宋体",
+sans-serif;
+body {
+    font-family: $font;
+    min-width: 600px;
+    min-height: 600px;
+}
+
+html {
+    height: 100%;
+}
+
+.page {
+    @include display-flex(flex);
+    @include flex-direction(column);
+    height: 100%;
+}
+
+.banner {
+    height: 105px;
+    background-color: #5cc1ce;
+    .set-width {
+        max-width: 980px;
+        margin: 0 auto;
+        height: 100%;
+        position: relative;
+    }
+    .logo {
+        @include display-flex(flex);
+        height: 100%;
+        cursor: default;
+        img:first-child {
+            width: 70px;
+            height: 70px;
+            margin: auto 0;
+        }
+        img:last-child {
+            width: 144px;
+            height: 50px;
+            margin: auto 0;
+            margin-left: 10px;
+        }
+    }
+    .nav {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        li {
+            display: inline-block;
+            list-style-type: none;
+            font-size: 19px;
+            color: #dfdfe7;
+            padding: 0 10px;
+            cursor: pointer;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s;
+        }
+        li:not(:last-child) {
+            &:hover {
+                color: #fdfdfe;
+            }
+        }
+        .login,
+        .signin {
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s;
+            padding: 0 3px;
+            &:hover {
+                color: #fdfdfe;
+            }
+        }
+    }
+}
+
+.behavior {
+    position: relative;
+    @include flex(1);
+    @include display-flex(flex);
+    min-height: 130px;
+    @include justify-content(center);
+    @include align-items(center);
+    background-color: #a8d8cb;
+    .official-article,
+    .share-article {
+        position: relative;
+        width: 329px;
+        height: 333px;
+        border: 4px solid #dddbdb;
+        background-color: #b4cdc7;
+        .title {
+            width: 167px;
+            height: 30px;
+            line-height: 30px;
+            background-color: #74c293;
+            text-align: center;
+            position: absolute;
+            cursor: default;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: #dfdfe7;
+        }
+        .search {
+            margin: 20px 0 10px 20px;
+            @include display-flex(flex);
+            input {
+                width: 203px;
+                height: 20px;
+                font-size: 11px;
+                border: 1px solid #e2ecea;
+                padding: 3px 0px 3px 8px;
+            }
+            .search-btn {
+                width: 46px;
+                height: 20px;
+                line-height: 16px;
+                font-size: 13px;
+                margin-left: 16px;
+                background-color: #fff;
+                border: 1px solid #e2ecea;
+                cursor: pointer;
+                outline: none;
+                font-weight: bold;
+            }
+        }
+        div[role="container"] {
+            height: 273px;
+            overflow: hidden;
+            .mCSB_draggerContainer{
+                left: -11px;
+            }
+        }
+        .recommend {
+            margin: 20px 5px 0 6px;
+            li {
+                @include display-flex(flex);
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #dfdfe8;
+            }
+            .logo {
+                height: 38px;
+                width: 43px;
+                display: inline-block;
+                margin: auto;
+            }
+            input {
+                padding-left: 4px;
+                border: 3px solid #dfdfe8;
+            }
+            .right-part {
+                width: 244px;
+            }
+            .text {
+                height: 30px;
+                background-color: #fff;
+                width: 160px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .detail {
+                width: 100%;
+                height: 25px;
+                margin-top: 5px;
+                background-color: #fff;
+                font-weight: bold;
+            }
+            label,
+            .select {
+                cursor: pointer;
+            }
+            .select {
+                border: 4px solid #dfdfe8;
+                vertical-align: text-top;
+            }
+        }
+        margin-top:-10px;
+    }
+    .official-article {
+        margin-right: 60px;
+    }
+    .play-cute {
+        position: absolute;
+        left:50%;
+        bottom:5px;
+        cursor:default;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 189px;
+        height: 15px;
+        line-height: 15px;
+        border: 4px solid #626262;
+        background-color: #b7b0d1;
+        box-sizing: content-box;
+        text-align: center;
+        font-size:14px;
+        cursor:pointer;
+    }
+}
+
+.footer {
+    height: 102px;
+    .set-width {
+        max-width: 980px;
+        margin: 0 auto;
+        height: 100%;
+        position: relative;
+    }
+    .row {
+        font-size: 13px;
+        line-height: 1.8;
+        a {
+            color: #000;
+            font-weight: bold;
+        }
+        div {
+            text-align: center;
+        }
+    }
+    .row:first-child {
+        font-size: 16px;
+    }
+    img {
+        position: absolute;
+        top: 0;
+    }
+    @media(min-width: 768px) {
+        img {
+            right: -0.1%;
+        }
+    }
+    @media(min-width:1175px) {
+        img {
+            right: -90px;
+        }
+    }
+}

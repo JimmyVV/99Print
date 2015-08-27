@@ -1,0 +1,291 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+@import "compass/css3/flexbox",
+"compass/reset",
+"self-defined";
+
+/*// Core variables and mixins*/
+
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+/*// Core CSS*/
+
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+@import "logo";
+$font: "Microsoft YaHei",
+"Arial",
+"黑体",
+"宋体",
+sans-serif;
+$border-color: #74c293;
+body {
+    font-family: $font;
+    min-width: 960px;
+    min-height: 600px;
+}
+
+html {
+    height: 100%;
+}
+
+.page {
+    @include display-flex(flex);
+    @include flex-direction(column);
+    height: 100%;
+}
+
+.banner {
+    height: 105px;
+    background-color: #5cc1ce;
+    .set-width {
+        max-width: 980px;
+        margin: 0 auto;
+        height: 100%;
+        position: relative;
+    }
+    .logo {
+        @include display-flex(flex);
+        height: 100%;
+        cursor: default;
+        img:first-child {
+            width: 70px;
+            height: 70px;
+            margin: auto 0;
+        }
+        img:last-child {
+            width: 144px;
+            height: 50px;
+            margin: auto 0;
+            margin-left: 10px;
+        }
+    }
+    .nav {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        li {
+            display: inline-block;
+            list-style-type: none;
+            font-size: 19px;
+            color: #dfdfe7;
+            padding: 0 10px;
+            cursor: pointer;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s;
+        }
+        li:not(:last-child) {
+            &:hover {
+                color: #fdfdfe;
+            }
+        }
+        .login,
+        .signin {
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s;
+            padding: 0 3px;
+            &:hover {
+                color: #fdfdfe;
+            }
+        }
+    }
+}
+
+.behavior {
+    position: relative;
+    @include flex(1);
+    @include display-flex(flex);
+    min-height: 130px;
+    @include justify-content(center);
+    @include align-items(center);
+    background-color: #a8d8cb;
+    .print-lists {
+        position: relative;
+        width: 960px;
+        height: 340px;
+        border: 9px solid $border-color;
+        padding: 5px 8px;
+        background-color: #fff;
+    }
+    .files {
+        width: 100%;
+        height: 266px;
+        th {
+            height: 25px;
+            line-height: 25px;
+            font-weight: bold;
+            text-align: center;
+            padding: 0 3px;
+        }
+        td {
+            padding: 8px 3px;
+            vertical-align: middle;
+            text-align: center;
+            cursor: default;
+            select {
+                cursor: pointer;
+            }
+        }
+        td[role='share'],
+        td[role='direction'],
+        td[role='page'] {
+            >div {
+                @include display-flex(flex);
+                @include flex-direction(column);
+                input {
+                    cursor: pointer;
+                }
+            }
+        }
+        td[role='file-name'] {
+            div {
+                @include truncateText;
+                width: 235px;
+            }
+            i {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        td[role='remark'] {
+            input {
+                padding-left: 8px;
+                @include truncateText;
+            }
+        }
+        .order {
+            width: 40px;
+        }
+        .file-name {
+            width: 240px;
+        }
+        .share {
+            width: 38px;
+        }
+        .leaf {
+            width: 56px;
+        }
+        .ppt-mount {
+            width: 109px;
+        }
+        .remark {
+            width: 165px;
+        }
+        td[role='copies'] {
+            input {
+                text-align: center;
+                @include truncateText();
+                width: 40px;
+            }
+        }
+
+    }
+    .receiving-method {
+        position: absolute;
+        display: table;
+        bottom: 7px;
+        width: 98%;
+        height: 36px;
+        background-color: #c9c9c8;
+        padding: 0 30px;
+
+        >div {
+            vertical-align: middle;
+            display: table-cell;
+        }
+        .middle-part{
+            width: 450px;
+            input{
+                padding-left: 8px;
+            }
+        }
+        label {
+            margin: 0 5px;
+        }
+        .receiving {
+            color: #e61a15;
+            font-size: 16px;
+            margin-right: 9px;
+        }
+        input[type="radio"] {
+            display: none;
+        }
+        input[type="radio"] + label span {
+            display: inline-block;
+            background-position: 0 -163px;
+            margin: -1px 4px 0 0;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+        input[type="radio"]:checked + label span {
+            background-position: 0 -142px;
+        }
+        .right-part{
+            text-align: right;
+            line-height: 36px;
+            .btn{
+                height: 30px;
+                padding:4px 12px;
+                margin-left: 15px;      
+                vertical-align: initial;
+            }
+        }
+        .total-price{
+            margin-left:10px;
+        }
+         .deliver{
+            display: none;
+            input{
+                @include truncateText;
+                width: 165px;
+            }
+        }
+    }
+}
+
+.footer {
+    height: 102px;
+    .set-width {
+        max-width: 980px;
+        margin: 0 auto;
+        height: 100%;
+        position: relative;
+    }
+    .row {
+        font-size: 13px;
+        line-height: 1.8;
+        a {
+            color: #000;
+            font-weight: bold;
+        }
+        div {
+            text-align: center;
+        }
+    }
+    .row:first-child {
+        font-size: 16px;
+    }
+    img {
+        position: absolute;
+        top: 0;
+    }
+    @media(min-width: 768px) {
+        img {
+            right: -0.1%;
+        }
+    }
+    @media(min-width:1175px) {
+        img {
+            right: -90px;
+        }
+    }
+}

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./styles/99orders.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/jquery.mCustomScrollbar.css">
+    <title>99打印</title>
+</head>
+
+<body class="page">
+    <header class="banner">
+        <div class="set-width">
+            <div class="logo">
+                <img src="./images/logo.png" />
+                <img src="./images/desc.png" />
+            </div>
+            <ul class="nav">
+                <li role="homepage">首页</li>
+                <li role="introduction">简介</li>
+                <li role="article-base">本校文库</li>
+                <li role="setting"><span class="login">登录</span>|<span class="signin">注册</span></li>
+            </ul>
+        </div>
+    </header>
+    <article class="behavior">
+        <div class="dealing-orders">
+            <div class='toggle-btn'>
+                <div class="pre-orders show">未处理订单</div>
+                <div class="doing-orders">正在处理订单</div>
+                <div class="history-orders">历史订单</div>
+            </div>
+            <div class="orders-container mCustomScrollbar" id="orders-container">
+                <ul role="prev-orders">
+                    <li>
+                        <table>
+                            <tr>
+                                <th>订单编号:</th>
+                                <td role="order-num">1324567897</td>
+                                <th>总价:</th>
+                                <td role="price">53￥</td>
+                                <th>收货方式:</th>
+                                <td role="receiving-method">
+                                    送货上门
+                                    <!-- <select class="receiving-method" name="deliver-address" id="address">
+                                        <option value="送货上门">送货上门</option>
+                                        <option value="到店自取">到店自取</option>
+                                    </select> -->
+                                </td>
+                                <th>支付状态:</th>
+                                <td role="pay">已支付</td>
+                                <td role="dealing">暂未处理</td>
+                            </tr>
+                            <tr>
+                                <th>收货地址:</th>
+                                <td role="deliver-address">
+                                    yy15#133
+                                    <!-- <input class="delivering" type="text"> -->
+                                    <!--  <select class="self-pick">
+                                    <option value="韵苑">韵苑</option>
+                                    <option value="紫松">紫松</option>
+                                    <option value="">沁园</option>
+                                </select> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>包含文件:</th>
+                                <td role="include-files">老万</td>
+                            </tr>
+                        </table>
+                        <button class="change-info">修改收货信息</button>
+                        <button class="cancel-order">取消订单</button>
+                        <button class="go-paying">去支付</button>
+                    </li>
+                    <li>
+                        <table>
+                            <tr>
+                                <th>订单编号:</th>
+                                <td role="order-num">1324567897</td>
+                                <th>总价:</th>
+                                <td role="price">53￥</td>
+                                <th>收货方式:</th>
+                                <td role="receiving-method">
+                                    送货上门
+                                    <!-- <select class="receiving-method" name="deliver-address" id="address">
+                                        <option value="送货上门">送货上门</option>
+                                        <option value="到店自取">到店自取</option>
+                                    </select> -->
+                                </td>
+                                <th>支付状态:</th>
+                                <td role="pay">已支付</td>
+                                <td role="dealing">暂未处理</td>
+                            </tr>
+                            <tr>
+                                <th>收货地址:</th>
+                                <td role="deliver-address">
+                                    yy15#133
+                                    <!-- <input class="delivering" type="text"> -->
+                                    <!--  <select class="self-pick">
+                                    <option value="韵苑">韵苑</option>
+                                    <option value="紫松">紫松</option>
+                                    <option value="">沁园</option>
+                                </select> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>包含文件:</th>
+                                <td role="include-files">老万</td>
+                            </tr>
+                        </table>
+                        <button class="change-info">修改收货信息</button>
+                        <button class="cancel-order">取消订单</button>
+                        <button class="go-paying">去支付</button>
+                    </li>
+                </ul>
+                <ul role="doing-orders">
+                    <li>
+                        <table>
+                            <tr>
+                                <th>订单编号:</th>
+                                <td role="order-num">1324567897</td>
+                                <th>总价:</th>
+                                <td role="price">53￥</td>
+                                <th>收货方式:</th>
+                                <td role="receiving-method">
+                                    送货上门
+                                    <!-- <select class="receiving-method" name="deliver-address" id="address">
+                                        <option value="送货上门">送货上门</option>
+                                        <option value="到店自取">到店自取</option>
+                                    </select> -->
+                                </td>
+                                <th>支付状态:</th>
+                                <td role="pay">已支付</td>
+                                <td role="dealing">正在处理</td>
+                            </tr>
+                            <tr>
+                                <th>收货地址:</th>
+                                <td role="deliver-address">
+                                    yy15#133
+                                    <!-- <input class="delivering" type="text"> -->
+                                    <!--  <select class="self-pick">
+                                    <option value="韵苑">韵苑</option>
+                                    <option value="紫松">紫松</option>
+                                    <option value="">沁园</option>
+                                </select> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>包含文件:</th>
+                                <td role="include-files">老万</td>
+                            </tr>
+                        </table>                        
+                        <button class="add">加印</button>
+                    </li>
+                    <li>
+                        <table>
+                            <tr>
+                                <th>订单编号:</th>
+                                <td role="order-num">1324567897</td>
+                                <th>总价:</th>
+                                <td role="price">53￥</td>
+                                <th>收货方式:</th>
+                                <td role="receiving-method">
+                                    送货上门
+                                    <!-- <select class="receiving-method" name="deliver-address" id="address">
+                                        <option value="送货上门">送货上门</option>
+                                        <option value="到店自取">到店自取</option>
+                                    </select> -->
+                                </td>
+                                <th>支付状态:</th>
+                                <td role="pay">已支付</td>
+                                <td role="dealing">正在处理</td>
+                            </tr>
+                            <tr>
+                                <th>收货地址:</th>
+                                <td role="deliver-address">
+                                    yy15#133
+                                    <!-- <input class="delivering" type="text"> -->
+                                    <!--  <select class="self-pick">
+                                    <option value="韵苑">韵苑</option>
+                                    <option value="紫松">紫松</option>
+                                    <option value="">沁园</option>
+                                </select> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>包含文件:</th>
+                                <td role="include-files">老万</td>
+                            </tr>
+                        </table>                        
+                        <button class="add">加印</button>
+                    </li>
+                </ul>
+                <ul role="history-orders">
+                    <li>
+                        <table>
+                            <tr>
+                                <th>订单编号:</th>
+                                <td role="order-num">1324567897</td>
+                                <th>总价:</th>
+                                <td role="price">53￥</td>
+                                <th>收货方式:</th>
+                                <td role="receiving-method">
+                                    送货上门
+                                    <!-- <select class="receiving-method" name="deliver-address" id="address">
+                                        <option value="送货上门">送货上门</option>
+                                        <option value="到店自取">到店自取</option>
+                                    </select> -->
+                                </td>
+                                <th>支付状态:</th>
+                                <td role="pay">已支付</td>
+                                <td role="dealing">正在处理</td>
+                            </tr>
+                            <tr>
+                                <th>收货地址:</th>
+                                <td role="deliver-address">
+                                    yy15#133
+                                    <!-- <input class="delivering" type="text"> -->
+                                    <!--  <select class="self-pick">
+                                    <option value="韵苑">韵苑</option>
+                                    <option value="紫松">紫松</option>
+                                    <option value="">沁园</option>
+                                </select> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>包含文件:</th>
+                                <td role="include-files">老万</td>
+                            </tr>
+                        </table>                        
+                        <button class="add">加印</button>
+                    </li>
+                    <li>
+                        <table>
+                            <tr>
+                                <th>订单编号:</th>
+                                <td role="order-num">1324567897</td>
+                                <th>总价:</th>
+                                <td role="price">53￥</td>
+                                <th>收货方式:</th>
+                                <td role="receiving-method">
+                                    送货上门
+                                    <!-- <select class="receiving-method" name="deliver-address" id="address">
+                                        <option value="送货上门">送货上门</option>
+                                        <option value="到店自取">到店自取</option>
+                                    </select> -->
+                                </td>
+                                <th>支付状态:</th>
+                                <td role="pay">已支付</td>
+                                <td role="dealing">正在处理</td>
+                            </tr>
+                            <tr>
+                                <th>收货地址:</th>
+                                <td role="deliver-address">
+                                    yy15#133
+                                    <!-- <input class="delivering" type="text"> -->
+                                    <!--  <select class="self-pick">
+                                    <option value="韵苑">韵苑</option>
+                                    <option value="紫松">紫松</option>
+                                    <option value="">沁园</option>
+                                </select> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>包含文件:</th>
+                                <td role="include-files">老万</td>
+                            </tr>
+                        </table>                        
+                        <button class="add">加印</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </article>
+    <footer class="footer">
+        <div class="set-width">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3"><a href="">关于文库</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">订单服务</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">关于公司</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">关注我们</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-3"><a href="">文库简介</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">购买指南</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">公司简介</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">新浪微博</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-3"><a href="">使用说明</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">支付方式</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">加入我们</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">官方微信</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-3"><a href="">鼓励分享</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">送货政策</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">联系我们</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">官方贴吧</a></div>
+                </div>
+            </div>
+            <img src="./images/QR-code.png" />
+        </div>
+    </footer>
+    <div class="modal fade" id="warning">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">通知</h4>
+                </div>
+                <div class="modal-body">
+                    <p>确认是否删除该订单!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="confirm">确认</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <script type="text/javascript" src="./scripts/jQuery.js"></script>
+    <script type="text/javascript" src="./scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="./scripts/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="./scripts/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript" src="./scripts/99order.js"></script>
+</body>
+
+</html>

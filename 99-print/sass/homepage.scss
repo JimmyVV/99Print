@@ -1,0 +1,159 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+@import "compass/css3/flexbox",
+"compass/reset";
+
+/*// Core variables and mixins*/
+
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+/*// Core CSS*/
+
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+@import "logo";
+$font: "Microsoft YaHei",
+"Arial",
+"黑体",
+"宋体",
+sans-serif;
+body {
+    font-family: $font;
+    min-width: 600px;
+    min-height: 600px;
+}
+
+html {
+    height: 100%;
+}
+
+.page {
+    @include display-flex(flex);
+    @include flex-direction(column);
+    height: 100%;
+}
+
+.banner {
+    height: 105px;
+    background-color: #5cc1ce;
+    .set-width {
+        max-width: 980px;
+        margin: 0 auto;
+        height: 100%;
+        position: relative;
+    }
+    .logo {
+        @include display-flex(flex);
+        height: 100%;
+        cursor: default;
+        img:first-child {
+            width: 70px;
+            height: 70px;
+            margin: auto 0;
+        }
+        img:last-child {
+            width: 144px;
+            height: 50px;
+            margin: auto 0;
+            margin-left: 10px;
+        }
+    }
+    .nav {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        li {
+            display: inline-block;
+            list-style-type: none;
+            font-size: 19px;
+            color: #dfdfe7;
+            padding: 0 10px;
+            cursor: pointer;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s;
+        }
+        li:not(:last-child) {
+            &:hover {
+                color: #fdfdfe;
+            }
+        }
+        .login,
+        .signin {
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s;
+            padding: 0 3px;
+            &:hover {
+                color: #fdfdfe;
+            }
+        }
+    }
+}
+
+.behavior {
+    position: relative;
+    @include flex(1);
+    @include display-flex(flex);
+    min-height: 130px;
+    @include justify-content(center);
+    @include align-items(center);
+    background-color: #a8d8cb;
+    .print-btn {
+        width: 273px;
+        height: 120px;
+        background-color: #74c293;
+        text-align: center;
+        line-height: 120px;
+        font-size: 50px;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+.footer {
+    height: 102px;
+    .set-width {
+        max-width: 980px;
+        margin: 0 auto;
+        height: 100%;
+        position: relative;
+    }
+    .row {
+        font-size: 13px;
+        line-height: 1.8;
+        a {
+            color: #000;
+            font-weight: bold;
+        }
+        div {
+            text-align: center;
+        }
+    }
+    .row:first-child {
+        font-size: 16px;
+    }
+    img {
+        position: absolute;
+        top: 0;
+    }
+    
+    @media(min-width: 768px){
+    	img{
+    		right: -0.1%;
+    	}
+    }
+    @media(min-width:1175px) {
+        img {
+            right: -90px;
+        }
+    }
+}
