@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./styles/99manager.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/jquery.mCustomScrollbar.css">
+    <title>99打印</title>
+</head>
+
+<body class="page">
+    <header class="banner">
+        <div class="set-width">
+            <div class="logo">
+                <img src="./images/logo.png" />
+                <img src="./images/desc.png" />
+            </div>
+            <ul class="nav">
+                <li role="homepage">首页</li>
+                <li role="introduction">简介</li>
+                <li role="article-base">本校文库</li>
+                <li role="setting"><span class="login">登录</span>|<span class="signin">注册</span></li>
+            </ul>
+        </div>
+    </header>
+    <article class="behavior">
+        <!-- <div class="choose-school"><input class="select-school" type="text" placeholder="请选择学校"></div> -->
+        <div class="manager">
+            <section class="left-part">
+                <h3 class="user show">管理用户               
+                </h3>
+                <ul class="sub-user">
+                    <li><span class="show">全部</span></li>
+                    <li><span>管理员</span></li>
+                    <li><span>会员</span></li>
+                    <li><span>配送员</span></li>
+                </ul>
+                <div class="shop">
+                    <h3 class="shop-btn">管理打印店</h3></div>
+                <h3 class="back">返回</h3>
+            </section>
+            <section class="right-part">
+                <header class="operation" id="operation">
+                    <input type="checkbox" name="select-all" id="select-all">
+                    <label class="select-all-content" for='select-all'><i class="logo-checkbox"></i>全选</label>
+                    <span class="authorize">授权成为:</span>
+                    <div class="member-btns">
+                        <button role="manager">管理员</button>
+                        <button role="VIP">会员</button>
+                        <button role="deliver">配送员</button>
+                    </div>
+                    <div class="search">
+                        <button>搜索</button>
+                        <input class="search-input" type="search" placeholder="请输入用户名">
+                    </div>
+                </header>
+                <article class="content">
+                    <div class="people-lists mCustomScrollbar" id="table-container">
+                        <table class="user-people" id="user">
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input type="checkbox" name="sub-box" id="user-1">
+                                        <label for="user-1"><i class="logo-checkbox"></i>坦白玩</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>用户ID:123456</div>
+                                </td>
+                                <td>
+                                    <div class="school">学校:华中科技大学</div>
+                                </td>
+                                <td>
+                                    <div>专业:应用物理</div>
+                                </td>
+                                <td>
+                                    <div>年级:2013级</div>
+                                </td>
+                                <td>
+                                    <div role="title">管理员</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input type="checkbox" name="sub-box" id="user-2">
+                                        <label for="user-2"><i class="logo-checkbox"></i>坦白玩</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>用户ID:123456</div>
+                                </td>
+                                <td>
+                                    <div class="school">学校:华中科技大学</div>
+                                </td>
+                                <td>
+                                    <div>专业:应用物理</div>
+                                </td>
+                                <td>
+                                    <div>年级:2013级</div>
+                                </td>
+                                <td>
+                                    <div role="title">管理员</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input type="checkbox" name="sub-box" id="user-1">
+                                        <label for="user-1"><i class="logo-checkbox"></i>坦白玩</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>用户ID:123456</div>
+                                </td>
+                                <td>
+                                    <div class="school">学校:华中科技大学</div>
+                                </td>
+                                <td>
+                                    <div>专业:应用物理</div>
+                                </td>
+                                <td>
+                                    <div>年级:2013级</div>
+                                </td>
+                                <td>
+                                    <div role="title">管理员</div>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>
+                                    <div>
+                                        <input type="checkbox" name="sub-box" id="user-1">
+                                        <label for="user-1"><i class="logo-checkbox"></i>xxx打印店</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>店铺ID:123456</div>
+                                </td>
+                                <td>
+                                    <div class="school">店铺地址:xxxx</div>
+                                </td>
+                                <td>
+                                    <div>店主名:xxx</div>
+                                </td>
+                                <td>
+                                    <div>电话:1234435</div>
+                                </td>
+                                <td>
+                                    <div role="title"><i class="logo-change" data-tooltip="修改"></i></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="desc">今日新增用户数:<span class="days-num">123</span> 本周新增用户数: <span class="month-num">321</span></div>
+                </article>
+            </section>
+        </div>
+    </article>
+    <footer class="footer">
+        <div class="set-width">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3"><a href="">关于文库</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">订单服务</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">关于公司</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">关注我们</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-3"><a href="">文库简介</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">购买指南</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">公司简介</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">新浪微博</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-3"><a href="">使用说明</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">支付方式</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">加入我们</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">官方微信</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-3"><a href="">鼓励分享</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">送货政策</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">联系我们</a></div>
+                    <div class="col-md-3 col-sm-3"><a href="">官方贴吧</a></div>
+                </div>
+            </div>
+            <img src="./images/QR-code.png" />
+        </div>
+    </footer>
+    <div class="add-shops">
+        <h3>添加打印店</h3>
+        <div class="table">
+            <div>
+                <span class="left-part">店铺名</span><span class="right-part"><input type="text"></span>
+            </div>
+            <div>
+                <span class="left-part">店铺地址</span><span class="right-part"><input type="text"></span>
+            </div>
+            <div>
+                <span class="left-part">店主名</span><span class="right-part"><input type="text"></span>
+            </div>
+            <div>
+                <span class="left-part">电话</span><span class="right-part"><input type="text"></span>
+            </div>
+            <div>
+                <span class="left-part">身份证</span><span class="right-part"><input type="text"></span>
+            </div>
+            <div>
+                <span class="left-part">邮箱</span><span class="right-part"><input type="text"></span>
+            </div>
+            <div>
+                <span class="left-part">支付宝账号</span><span class="right-part"><input type="text"></span>
+            </div>
+            <div>
+                <span class="left-part">支付宝昵称</span><span class="right-part"><input type="text"></span>
+            </div>
+            <div>
+                <span class="left-part">银行卡号</span><span class="right-part"><input type="text"></span>
+            </div>
+        </div>
+        <button class="save-btn" role="save">保存</button>
+    </div>
+    <script type="text/javascript" src="./scripts/jQuery.js"></script>
+    <script type="text/javascript" src="./scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="./scripts/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="./scripts/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript" src="./scripts/99manage.js"></script>
+</body>
+
+</html>

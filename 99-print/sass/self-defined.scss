@@ -96,8 +96,7 @@
 */
 @mixin truncateText($overflow: ellipsis){
   overflow: hidden;
-  white-space: nowrap;
-  width:100%;  
+  white-space: nowrap;  
   text-overflow: $overflow; // values are: clip, ellipsis, or a string
 }
 
@@ -234,7 +233,7 @@
     @if ($direction == 'top'){
       &:before {
         @include triangle(down, 6px,  rgba(0,0,0,0.6));
-        top: -2px; margin-top: 0;
+        top: -4px; margin-top: 0;
 
       }
       &:after {

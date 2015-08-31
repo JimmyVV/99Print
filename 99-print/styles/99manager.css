@@ -58,6 +58,63 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/*
+* UtilityBelt - a starter kit for any SASS project
+* By @dmtintner & @hackingui
+* Documentation and examples - hackingui.com/front-end/10-best-scss-utilities/
+* V1.1.0
+*/
+/*
+## Triangle
+* @include triangle within a pseudo element and add positioning properties (ie. top, left)
+* $direction: up, down, left, right
+*/
+/*
+* Currency
+*
+*/
+/*
+* Clearfix
+*
+*/
+/*
+* Ghost Vertical Align
+*/
+/*
+* Truncate Text
+* bypass text
+*/
+/*
+* Animation
+*
+*/
+/*
+* Alerted
+*
+*/
+/*
+* Resize Sprite - for resizing only a single image from a sprite
+*
+* params: $map = $<name>-sprites (ex. $icon-sprites)
+*         $sprite = file name w/o file type ending (ex. globe)
+          $percent = number (ex. 50)
+*
+* (if compass CSS3 mixins not included, uncomment the background-size row and comment the @include version)
+*/
+/*
+* Resizes all images in a given sprite
+* mixin courtesy of Wilker Lúcio https://gist.github.com/wilkerlucio/6442309
+* params: $only = if you want to list specific files instead of regenerating every image (ex. globe, checkmark)
+*/
+/*
+* HUI Tooltips
+* 
+*/
+/*
+## Text-align justify
+For perfectly aligned grids that don't rely on floating elements and difficult calculations
+
+- http://www.barrelny.com/blog/text-align-justify-and-rwd/ */
 /*// Core variables and mixins*/
 /*// Core CSS*/
 * {
@@ -557,63 +614,6 @@ address {
   margin-bottom: 20px;
   font-style: normal;
   line-height: 1.42857;
-}
-
-code,
-kbd,
-pre,
-samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-code {
-  padding: 2px 4px;
-  font-size: 90%;
-  color: #c7254e;
-  background-color: #f9f2f4;
-  border-radius: 4px;
-}
-
-kbd {
-  padding: 2px 4px;
-  font-size: 90%;
-  color: #fff;
-  background-color: #333;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
-}
-kbd kbd {
-  padding: 0;
-  font-size: 100%;
-  font-weight: bold;
-  box-shadow: none;
-}
-
-pre {
-  display: block;
-  padding: 9.5px;
-  margin: 0 0 10px;
-  font-size: 13px;
-  line-height: 1.42857;
-  word-break: break-all;
-  word-wrap: break-word;
-  color: #333333;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-pre code {
-  padding: 0;
-  font-size: inherit;
-  color: inherit;
-  white-space: pre-wrap;
-  background-color: transparent;
-  border-radius: 0;
-}
-
-.pre-scrollable {
-  max-height: 340px;
-  overflow-y: scroll;
 }
 
 .container {
@@ -2673,8 +2673,8 @@ input[type="button"].btn-block {
 }
 
 body {
-  font-family: "Microsoft YaHei", "Arial", "榛戜綋", "瀹嬩綋", sans-serif;
-  min-width: 600px;
+  font-family: "Microsoft YaHei", "Arial", "黑体", "宋体", sans-serif;
+  min-width: 960px;
   min-height: 600px;
 }
 
@@ -2761,15 +2761,200 @@ html {
   align-items: center;
   background-color: #a8d8cb;
 }
-.behavior .print-btn {
-  width: 273px;
-  height: 120px;
-  background-color: #74c293;
+.behavior .manager {
+  display: -webkit-flex;
+  display: flex;
+  width: 780px;
+  height: 335px;
+  background-color: #fff;
+  border: 2px solid #616161;
+  padding: 10px 6px;
+}
+.behavior .manager h3 {
+  font-size: 18px;
+  color: #6f6b6b;
   text-align: center;
-  line-height: 120px;
-  font-size: 50px;
-  color: #fff;
+  margin: 0;
+  margin: 6px 0;
+  padding: 8px 0;
   cursor: pointer;
+}
+.behavior .manager h3.show {
+  background-color: #a8d8cb;
+  border-radius: 3px;
+}
+.behavior .manager .shop {
+  border-top: 2px solid #d2d0d9;
+  border-bottom: 2px solid #d2d0d9;
+}
+.behavior .left-part {
+  width: 115px;
+  margin-top: 20px;
+  padding-right: 20px;
+  border-right: 2px solid #d2d0d9;
+}
+.behavior .left-part li {
+  font-size: 16px;
+  text-align: right;
+  padding: 3px 0;
+  margin: 2px 0;
+  font-weight: bold;
+}
+.behavior .left-part li span {
+  padding: 1px 3px;
+  cursor: pointer;
+}
+.behavior .left-part li span.show {
+  background-color: #a8d8cb;
+  border-radius: 3px;
+}
+.behavior .right-part {
+  -webkit-flex: 1;
+  flex: 1;
+  margin-left: 20px;
+}
+.behavior .right-part input[type="checkbox"] {
+  display: none;
+}
+.behavior .right-part input[type="checkbox"] + label i {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+.behavior .right-part i.show {
+  background-position: 0 -19px;
+}
+.behavior .right-part button {
+  width: 71px;
+  height: 20px;
+  line-height: 18px;
+  font-size: 14px;
+  margin: 0 3px;
+  text-align: center;
+  border: 1px solid #616161;
+  border-radius: 4px;
+  outline: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+.behavior .right-part .select-all-content {
+  font-size: 20px;
+  color: #A5A4A3;
+  margin: 0;
+  margin-right: 20px;
+}
+.behavior .right-part .search-input {
+  width: 120px;
+  border: 1px solid #616161;
+  outline: none;
+}
+.behavior .member-btns {
+  display: inline-block;
+}
+.behavior .operation {
+  padding: 0 8px;
+}
+.behavior .search {
+  float: right;
+  margin-top: 5px;
+}
+.behavior .content {
+  border: 1px solid #aba5a2;
+  width: 100%;
+  height: 279px;
+  margin-top: 8px;
+  padding: 3px;
+}
+.behavior .content label {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 5px;
+}
+.behavior .content .user {
+  width: 95%;
+}
+.behavior .content tr {
+  height: 30px;
+  vertical-align: middle;
+}
+.behavior .content tr + tr {
+  border-top: 1px solid #aba5a2;
+}
+.behavior .content td:first-child > div {
+  width: 97px;
+}
+.behavior .content td:not(:first-child) > div {
+  font-size: 15px;
+  display: inline-block;
+  text-align: center;
+  color: #2e2d2d;
+  width: 103px;
+}
+.behavior .content td:not(:last-child) > div {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.behavior .content td:last-child > div {
+  width: 50px;
+  color: #22469b;
+}
+.behavior .content .school {
+  width: 135px !important;
+}
+.behavior .content .people-lists {
+  height: 240px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.behavior .content .mCSB_container {
+  margin: 0;
+}
+.behavior .content .desc {
+  border-top: 1px solid;
+  text-align: right;
+  width: 95%;
+}
+.behavior .content .logo-change {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+.behavior .content .logo-change:before, .behavior .content .logo-change:after {
+  display: none;
+  z-index: 98;
+}
+.behavior .content .logo-change:hover:after {
+  content: attr(data-tooltip);
+  display: block;
+  line-height: 1.5em;
+  position: absolute;
+  padding: 3px 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+}
+.behavior .content .logo-change:hover:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  left: 50%;
+  margin-left: -6px;
+  border-top: 6px solid rgba(0, 0, 0, 0.6);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  top: -4px;
+  margin-top: 0;
+}
+.behavior .content .logo-change:hover:after {
+  top: -28px;
+  left: 47%;
+  margin-left: -20px;
 }
 
 .footer {
@@ -2808,4 +2993,49 @@ html {
   .footer img {
     right: -90px;
   }
+}
+
+.add-shops {
+  position: absolute;
+  display: none;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 313px;
+  height: 380px;
+  border: 1px solid #616161;
+}
+.add-shops h3 {
+  margin-left: 10px;
+}
+.add-shops .table {
+  width: 270px;
+  margin: 0 auto;
+  border: 1px solid #616161;
+  padding: 9px;
+}
+.add-shops .table > div {
+  height: 30px;
+}
+.add-shops .table > div::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.add-shops .left-part {
+  float: left;
+}
+.add-shops .right-part {
+  float: right;
+}
+.add-shops .save-btn {
+  width: 72px;
+  height: 25px;
+  display: block;
+  margin: 4px auto;
 }

@@ -26,6 +26,8 @@ $font: "Microsoft YaHei",
 "宋体",
 sans-serif;
 $border-color: #74c293;
+$title-btn: #464578;
+
 body {
     font-family: $font;
     min-width: 960px;
@@ -116,6 +118,50 @@ html {
         padding: 5px 8px;
         background-color: #fff;
     }
+    .upload,
+    .add,
+    .print-lists-btn {
+        position: absolute;
+        background-color: $border-color;
+        text-align: center;
+        color: $title-btn;
+    }
+    .upload,.add{
+        height: 25px;
+        line-height: 25px;
+        width: 92px;
+        top:-28px;
+        right: 75px;
+        border-radius: 5px;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+        a{
+            color: $title-btn;
+            &:hover,&:focus{
+                text-decoration: none;
+                color: $title-btn;
+            }
+        }
+        &:hover{
+            -webkit-transform:scale(1.2) ;
+            -ms-transform:scale(1.2) ;
+            -o-transform:scale(1.2) ;
+            transform:scale(1.2) ; 
+        }
+    }
+    .upload{
+        right: 186px;
+    }
+    .print-lists-btn {
+        font-size: 23px;
+        width: 152px;
+        cursor: default;
+        height: 30px;
+        line-height: 30px;
+        top: -34px;
+        border-radius: 8px;
+    }
     .files {
         width: 100%;
         height: 266px;
@@ -187,7 +233,6 @@ html {
                 width: 40px;
             }
         }
-
     }
     .receiving-method {
         position: absolute;
@@ -197,14 +242,13 @@ html {
         height: 36px;
         background-color: #c9c9c8;
         padding: 0 30px;
-
         >div {
             vertical-align: middle;
             display: table-cell;
         }
-        .middle-part{
+        .middle-part {
             width: 450px;
-            input{
+            input {
                 padding-left: 8px;
             }
         }
@@ -229,22 +273,22 @@ html {
         input[type="radio"]:checked + label span {
             background-position: 0 -142px;
         }
-        .right-part{
+        .right-part {
             text-align: right;
             line-height: 36px;
-            .btn{
+            .btn {
                 height: 30px;
-                padding:4px 12px;
-                margin-left: 15px;      
+                padding: 4px 12px;
+                margin-left: 15px;
                 vertical-align: initial;
             }
         }
-        .total-price{
-            margin-left:10px;
+        .total-price {
+            margin-left: 10px;
         }
-         .deliver{
+        .deliver {
             display: none;
-            input{
+            input {
                 @include truncateText;
                 width: 165px;
             }

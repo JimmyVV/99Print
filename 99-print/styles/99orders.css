@@ -2639,43 +2639,61 @@ input[type="button"].btn-block {
   width: 100%;
 }
 
-.logo-sprite, .logo-excel, .logo-file, .logo-ppt, .logo-radio-checked, .logo-radio, .logo-word {
-  background-image: url('../images/logo-sad34385f4c.png');
+.logo-sprite, .logo-change, .logo-checkbox-checked, .logo-checkbox, .logo-excel, .logo-file, .logo-ppt, .logo-radio-checked, .logo-radio, .logo-word {
+  background-image: url('../images/logo-s6798898c67.png');
   background-repeat: no-repeat;
 }
 
-.logo-excel {
+.logo-change {
   background-position: 0 0;
+  height: 11px;
+  width: 16px;
+}
+
+.logo-checkbox-checked {
+  background-position: 0 -19px;
+  height: 14px;
+  width: 14px;
+}
+
+.logo-checkbox {
+  background-position: 0 -41px;
+  height: 14px;
+  width: 14px;
+}
+
+.logo-excel {
+  background-position: 0 -63px;
   height: 43px;
   width: 40px;
 }
 
 .logo-file {
-  background-position: 0 -51px;
+  background-position: 0 -114px;
   height: 35px;
   width: 43px;
 }
 
 .logo-ppt {
-  background-position: 0 -94px;
+  background-position: 0 -157px;
   height: 40px;
   width: 38px;
 }
 
 .logo-radio-checked {
-  background-position: 0 -142px;
+  background-position: 0 -205px;
   height: 13px;
   width: 13px;
 }
 
 .logo-radio {
-  background-position: 0 -163px;
+  background-position: 0 -226px;
   height: 13px;
   width: 13px;
 }
 
 .logo-word {
-  background-position: 0 -184px;
+  background-position: 0 -247px;
   height: 40px;
   width: 36px;
 }
